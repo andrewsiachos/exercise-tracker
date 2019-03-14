@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Exercise Tracker | Andrew Siachos</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+         <h1>Exercise tracker</h1>
+          
+        
+        <div id="formContainer">
+          
+          <div id="formOne">
+            <!--FORM TO ADD NEW USER-->
+            <form action="/api/exercise/new-user" method="post">
+              <h3>Create a New User</h3>
+              <p><i>Add a new user with a username you wish.</i></p>
+              <p><u>Note</u>:When you submit your username you will be provided with a generated userId. Please make sure to keep that userId safe, since you cannot retrieve it.</p>
+              <input id="uname" type="text" name="username" placeholder="username">
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+          
+          <div id="formTwo"> 
+            <!--FORM TO ADD EXERCISE DETAILS-->
+            <form action="/api/exercise/add" method="post">
+              <h3>Add exercises</h3>
+              <p>Add a new exercise to an existing user via its userId</p>
+              <p><u>Note</u>: Fields with <span>*</span> are required</p>
+              <input id="uid" type="text" name="userId" placeholder="userId*">
+              <input id="desc" type="text" name="description" placeholder="description*">
+              <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
+              <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)">
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+          
+        </div>
+        <h4>
+          If you want to get the log of a user enter the following in your browser's url:<br/>
+          /api/exercise/log/userId
+        </h4>
+          
+          
+          
+      </div>
+     <footer>
+       <p>
+          by <a href="https://codepen.io/AndrewAS" target="_blank">Andrew Siachos</a>
+       </p>
+       <div id="image">
+         <a href="https://github.com/andrewsiachos" target="_blank"><img src="https://avatars3.githubusercontent.com/u/33431923?s=460&v=4.jpg" alt="image" width="150" height="150"/></a>
+       </div>
+       
+       <div id="social">
+         
+         <div>
+           <a href="https://twitter.com/andrew_siachos" target="_blank" ><img src="http://wordsworth-editions.com/img/twitter.png" alt="twitter icon" class="socImg"/></a>
+         </div>
+         <div>
+           <a href="https://www.facebook.com/andrew.siaxos" target="_blank"><img src="http://wordsworth-editions.com/img/facebook.png" alt="facebook icon" class="socImg"/></a>
+         </div>
+           
+         
+       </div>
+     </footer>
+     <!--SIGNATURE END -->
+   </body>
+
+</html>
